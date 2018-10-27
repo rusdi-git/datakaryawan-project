@@ -18,10 +18,12 @@ from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
 
-from karyawan import views
+from karyawan import views as kar_view
+from overtime import views as over_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home, name='home'),
-    path('listkaryawan/',views.list_karyawan, name='listkaryawan')
+    path('', kar_view.home, name='home'),
+    path('listkaryawan/',kar_view.list_karyawan, name='listkaryawan'),
+    path('inputatr', over_view.input_atr, name='inputatr')
 ]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
