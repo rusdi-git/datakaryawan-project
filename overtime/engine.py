@@ -63,3 +63,4 @@ class ATR_Processor():
                 i['date_in']=date
             elif i['date_out']==None:
                 date = i['date_in'].replace(hour=18, minute=0, second=0)
+                i['date_out']=date

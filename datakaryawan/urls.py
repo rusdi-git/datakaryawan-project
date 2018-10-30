@@ -25,6 +25,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', kar_view.home, name='home'),
     path('listkaryawan/',kar_view.list_karyawan, name='listkaryawan'),
-    path('inputatr', over_view.input_atr, name='inputatr'),
-    path('processatr', over_view.process_atr, name='processatr'),
+    path('inputatr/', over_view.input_atr, name='inputatr'),
+    path('processatr/', over_view.process_atr, name='processatr'),
 ]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
